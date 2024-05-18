@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState, useEffect } from "react";
+import { ThemeProvider } from "styled-components";
+import { darkTheme } from "./styles/theme";
+import GlobalStyles from "./styles/GlobalStyles";
+import Login from "./components/Login";
+import { auth, firestore } from "./firebase";
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (user) {
+      const unsubscribe = firestore
+        .collection("transactions")
+        .where("userId", "==", user.uid)
+        .onSnapshot((snapshot) => {
+          const data = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setTransactions(data);
+        });
+      return () => unsubscribe();
+    }
+  }, [user]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <GlobalStyles />
+      <div>
+        {!user ? (
+          <Login setUser={setUser} />
+        ) : (
+          <div>
+            <h1>Transactions</h1>
+            <ul>
+              {transactions.map((transaction) => (
+                <li key={transaction.id}>
+                  {transaction.type}: ${transaction.amount}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
