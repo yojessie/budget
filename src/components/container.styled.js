@@ -5,5 +5,7 @@ export const StyledContainer = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 24px;
+  background-color: ${({ theme }) => theme.color.bg};
+  color: ${({ theme }) => theme.color.txtBody};
   ${({ theme }) => theme.flex.center};
 `;

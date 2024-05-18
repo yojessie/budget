@@ -11,8 +11,6 @@ const GlobalStyle = createGlobalStyle`
   }
   html, body {
     font-family: 'NanumSquare', sans-serif;
-    background-color: ${({ theme }) => theme.color.bg};
-    color: ${({ theme }) => theme.color.txtBody};
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare', sans-serif;
