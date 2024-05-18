@@ -1,62 +1,31 @@
 // src/App.js
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { darkTheme } from "./styles/theme";
+import Login from "./components/Button/LoginButton";
+import Button from "./components/Button/Button";
+import darkTheme from "./styles/themes/darkTheme";
+import lightTheme from "./styles/themes/lightTheme";
 import GlobalStyles from "./styles/GlobalStyles";
-import Login from "./components/Login";
-import { auth, firestore } from "./firebase";
+import { StyledContainer } from "./components/container.styled";
 
 const App = () => {
-  const [user, setUser] = useState(null);
-  const [transactions, setTransactions] = useState([]);
+  const [theme, setTheme] = useState(lightTheme);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setUser(user);
-      } else {
-        setUser(null);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  useEffect(() => {
-    if (user) {
-      const unsubscribe = firestore
-        .collection("transactions")
-        .where("userId", "==", user.uid)
-        .onSnapshot((snapshot) => {
-          const data = snapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }));
-          setTransactions(data);
-        });
-      return () => unsubscribe();
-    }
-  }, [user]);
+  const toggleTheme = () => {
+    setTheme((prevTheme) =>
+      prevTheme === lightTheme ? darkTheme : lightTheme
+    );
+  };
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div>
-        {!user ? (
-          <Login setUser={setUser} />
-        ) : (
-          <div>
-            <h1>Transactions</h1>
-            <ul>
-              {transactions.map((transaction) => (
-                <li key={transaction.id}>
-                  {transaction.type}: ${transaction.amount}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
+
+      <StyledContainer>
+        <Button>click me</Button>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+        <Login />
+      </StyledContainer>
     </ThemeProvider>
   );
 };

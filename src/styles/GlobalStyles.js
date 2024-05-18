@@ -11,18 +11,29 @@ const GlobalStyle = createGlobalStyle`
   }
   html, body {
     font-family: 'NanumSquare', sans-serif;
-    width: 100vw;
-    height: 100vh;
+    background-color: ${({ theme }) => theme.color.bg};
+    color: ${({ theme }) => theme.color.txtBody};
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'NanumSquare', sans-serif;
+    color: ${({ theme }) => theme.color.txtBody};
+  }
+  p {
+    color: ${({ theme }) => theme.color.txtBody};
   }
   ol, ul {
     list-style: none;
   }
   button {
     font-family: 'NanumSquare', sans-serif;
+    color: ${({ theme }) => theme.color.txtBody};
     border: none;
     outline: none;
     background-color: inherit;
     cursor: pointer;
+  }
+  input, textarea {
+    font-family: 'NanumSquare', sans-serif;
   }
   a {
     text-decoration: none;
