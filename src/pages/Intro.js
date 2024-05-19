@@ -1,14 +1,19 @@
 import React from "react";
-import { Logo } from "./Intro.styled";
+import { LogoImg, LogoText, Title, LogoDiv } from "./Intro.styled";
 import { StyledContainer } from "../components/container.styled";
-import Login from "../components/Button/LoginButton";
-import logo from "../assets/logo.png";
+import LoginButton from "../components/Button/LoginButton";
+import logoImg from "../assets/logo-img.svg";
+import logoText from "../assets/logo-txt.svg";
 
 const Intro = () => {
   return (
     <StyledContainer>
-      <Logo src={logo} alt="Logo" />
-      <Login />
+      <LogoDiv>
+        <LogoImg src={logoImg} alt="LogoImage" />
+        <Title>가볍게 시작하는 예산 관리</Title>
+        <LogoText src={logoText} alt="LogoText" />
+      </LogoDiv>
+      <LoginButton />
     </StyledContainer>
   );
 };

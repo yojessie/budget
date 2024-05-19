@@ -24,9 +24,21 @@ const commonStyles = {
   flex: {
     center: `
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+  `,
+    centerRow: `
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  `,
+    between: `
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      align-self: stretch;
   `,
   },
   radius: {

@@ -17,7 +17,9 @@ const Login = () => {
   };
 
   return !user ? (
-    <StyledButton onClick={handleGoogleLogin}>Login with Google</StyledButton>
+    <StyledButton onClick={handleGoogleLogin}>
+      구글 계정으로 시작하기
+    </StyledButton>
   ) : (
     <div>Welcome, {user.displayName}</div>
   );

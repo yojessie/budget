@@ -7,8 +7,4 @@ export const StyledButton = styled.button`
   border-radius: ${({ theme }) => theme.radius.regular};
   box-shadow: ${({ theme }) => theme.shadow};
   ${({ theme }) => theme.typo.large};
-
-  &:hover {
-    opacity: 80%;
-  }
 `;

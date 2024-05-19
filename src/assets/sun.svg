@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="sun">
+<path id="Vector" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ED5564" stroke="#ED5564" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 1" d="M12 5V8" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 2" d="M12 16V19" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 3" d="M5 12L8 12" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 4" d="M16 12L19 12" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 5" d="M16.9498 7.05029L14.8284 9.17161" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 6" d="M9.17157 14.8284L7.05025 16.9497" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 7" d="M7.05023 7.05029L9.17155 9.17161" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 8" d="M14.8284 14.8284L16.9498 16.9497" stroke="#ED5564" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

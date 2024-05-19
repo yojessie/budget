@@ -4,25 +4,30 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import Intro from "./pages/Intro";
-import BudgetList from "./pages/BudgetList";
+import Budget from "./pages/Budget";
 import darkTheme from "./styles/themes/darkTheme";
 import lightTheme from "./styles/themes/lightTheme";
 
 const App = () => {
-  const [theme, setTheme] = useState(darkTheme);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === darkTheme ? lightTheme : darkTheme));
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <GlobalStyles />
 
       <Router>
         <Routes>
-          <Route path="/" element={<Intro toggleTheme={toggleTheme} />} />
-          <Route path="/BudgetList" element={<BudgetList />} />
+          <Route path="/" element={<Intro />} />
+          <Route
+            path="/Budget"
+            element={
+              <Budget toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+            }
+          />
         </Routes>
       </Router>
     </ThemeProvider>
