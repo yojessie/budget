@@ -10,9 +10,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   html, body {
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     font-family: 'NanumSquare', sans-serif;
     background-color: #111;
+    ${({ theme }) => theme.flex.center};
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare', sans-serif;
@@ -30,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     background-color: inherit;
+    transition: opacity, 0.5s;
     cursor: pointer;
 
     &:hover {
@@ -47,10 +50,9 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     width: 100%;
-    max-width: 360px;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 24px 0;
+    max-width: 375px;
+    height: 100%;
+    max-height: 740px;
     transition: all 0.3s;
   }
 `;

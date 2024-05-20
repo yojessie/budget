@@ -6,8 +6,3 @@ export const FloatButton = styled.button`
   border-radius: 30px;
   background-color: ${({ theme }) => theme.color.yellow};
 `;
-
-export const Icon = styled.img`
-  width: 24px;
-  height: 24px;
-`;

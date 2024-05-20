@@ -21,9 +21,9 @@ const App = () => {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Intro />} />
+          <Route path="/hello" element={<Intro />} />
           <Route
-            path="/Budget"
+            path="/budget"
             element={
               <Budget toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             }

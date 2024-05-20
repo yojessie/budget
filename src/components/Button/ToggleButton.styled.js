@@ -5,11 +5,12 @@ export const Container = styled.div`
   height: auto;
   background-color: ${({ theme }) => theme.color.bgDark};
   border-radius: 20px;
+  gap: 4px;
+  flex-direction: ${({ isDarkMode }) => (isDarkMode ? "row" : "row-reverse")};
   padding: ${({ isDarkMode }) =>
     isDarkMode ? "4px 6px 4px 8px" : "4px 8px 4px 6px"};
-  gap: 4px;
   ${({ theme }) => theme.flex.centerRow};
-  flex-direction: ${({ isDarkMode }) => (isDarkMode ? "row" : "row-reverse")};
+  cursor: pointer;
 `;
 
 export const Toggle = styled.div`
@@ -17,17 +18,4 @@ export const Toggle = styled.div`
   height: 20px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.bgPale};
-  cursor: pointer;
-`;
-
-export const MoonIcon = styled.img`
-  width: 24px;
-  height: 24px;
-  display: ${({ isDarkMode }) => (isDarkMode ? "block" : "none")};
-`;
-
-export const SunIcon = styled.img`
-  width: 24px;
-  height: 24px;
-  display: ${({ isDarkMode }) => (isDarkMode ? "none" : "block")};
 `;

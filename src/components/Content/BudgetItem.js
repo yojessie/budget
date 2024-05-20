@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Icon } from "../Button/IconButton.styled";
+import { IconButton } from "../Button/IconButton.styled";
 import {
   BudgetItem,
   Title,
@@ -7,7 +7,7 @@ import {
   DateWrapper,
   TextWrapper,
 } from "./BudgetItem.styled";
-import StarOff from "../../assets/star-off.svg";
+import { IconStar } from "../../assets/icons/icons";
 
 const BudgetList = () => {
   return (
@@ -21,7 +21,7 @@ const BudgetList = () => {
         </DateWrapper>
       </TextWrapper>
       <IconButton>
-        <Icon src={StarOff} alt="budget list"></Icon>
+        <IconStar />
       </IconButton>
     </BudgetItem>
   );

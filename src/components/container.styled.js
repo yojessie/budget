@@ -5,7 +5,6 @@ export const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 24px 24px 24px;
-  color: ${({ theme }) => theme.color.txtBody};
   background-color: ${({ theme }) => theme.color.bg};
   ${({ theme }) => theme.flex.center};
   border-radius: ${({ theme }) => theme.radius.regular};

@@ -5,9 +5,7 @@ export const IconButton = styled.div`
   height: 40px;
   ${({ theme }) => theme.flex.center};
   cursor: pointer;
-`;
 
-export const Icon = styled.img`
-  width: 24px;
-  height: 24px;
+  color: ${({ color, theme }) => color || theme.color.yellow};
+  // svg 아이콘을 감싸는 태그가 필요하다
 `;

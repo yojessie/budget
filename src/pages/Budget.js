@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledContainer } from "../components/container.styled";
 import BudgetGnb from "../components/Gnb/BudgetGnb";
-import { BudgetList } from "../components/Content/BudgetList.styled";
 import BudgetItem from "../components/Content/BudgetItem";
+import { StyledContainer } from "../components/container.styled";
+import { BudgetList } from "../pages/Budget.styled";
 
 const Budget = ({ toggleTheme, isDarkMode }) => {
   return (
