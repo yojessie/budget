@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Icon from "./icons.styled";
 
 import { ReactComponent as calendar } from "./calendar.svg";
 import { ReactComponent as down } from "./down.svg";
@@ -14,40 +13,48 @@ import { ReactComponent as star } from "./star.svg";
 import { ReactComponent as moon } from "./moon.svg";
 import { ReactComponent as sun } from "./sun.svg";
 
+const STYLEDICON = `
+  color: ${({ theme }) => theme.color.txtBody};
+  width: 24px;
+  height: 24px;
+`;
+
 export const IconCalendar = styled(calendar)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconDown = styled(down)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconLeft = styled(left)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconRight = styled(right)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconClose = styled(close)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconEdit = styled(edit)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconMenu = styled(menu)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconPlus = styled(plus)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconSetting = styled(setting)`
-  ${Icon}
+  ${STYLEDICON}
 `;
 export const IconStar = styled(star)`
-  ${Icon}
+  ${STYLEDICON}
+  color: ${({ theme }) => theme.color.bgDisabled};
 `;
 export const IconMoon = styled(moon)`
-  ${Icon}
+  ${STYLEDICON}
   color: ${({ theme }) => theme.color.blue};
 `;
 export const IconSun = styled(sun)`
-  ${Icon}
+  ${STYLEDICON}
+  color: ${({ theme }) => theme.color.red};
 `;
