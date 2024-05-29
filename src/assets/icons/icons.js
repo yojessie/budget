@@ -48,7 +48,6 @@ export const IconSetting = styled(setting)`
 `;
 export const IconStar = styled(star)`
   ${STYLEDICON}
-  color: ${({ theme }) => theme.color.bgDisabled};
 `;
 export const IconMoon = styled(moon)`
   ${STYLEDICON}

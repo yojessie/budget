@@ -50,10 +50,9 @@ const GlobalStyle = createGlobalStyle`
 
   #root {
     width: 100%;
-    max-width: 375px;
     height: 100%;
-    max-height: 740px;
-    transition: all 0.3s;
+    background-color: ${({ theme }) => theme.color.bgRoot};
+    ${({ theme }) => theme.flex.center};
   }
 `;
 

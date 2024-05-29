@@ -14,7 +14,8 @@ const darkTheme = {
     yellow: "#FEC044",
     green: "#8FD148",
     red: "#FF435A",
-    background: "linear-gradient(167deg, #22242A 0%, #2A3043 100%)",
+    gradient: "linear-gradient(167deg, #22242A 0%, #2A3043 100%)",
+    bgRoot: "#111",
   },
   ...commonStyles,
 };

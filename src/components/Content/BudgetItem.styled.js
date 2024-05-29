@@ -13,6 +13,11 @@ export const BudgetItem = styled.li`
   &:last-child {
     margin-bottom: 0;
   }
+
+  .starButton {
+    color: ${({ isFavorit, theme }) =>
+      isFavorit ? theme.color.yellow : theme.color.bgDisabled};
+  }
 `;
 
 export const Title = styled.h2`

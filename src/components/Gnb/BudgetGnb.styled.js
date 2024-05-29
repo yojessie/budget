@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const GnbContainer = styled.div`
   width: 100%;
   height: auto;
   padding: 16px 0;

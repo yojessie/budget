@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IconButton } from "../Button/IconButton.styled";
 import {
   BudgetItem,
@@ -10,8 +10,14 @@ import {
 import { IconStar } from "../../assets/icons/icons";
 
 const BudgetList = () => {
+  const [isFavorit, setFavorit] = useState(false);
+
+  const handleFavorit = () => {
+    setFavorit((prev) => !prev);
+  };
+
   return (
-    <BudgetItem>
+    <BudgetItem isFavorit={isFavorit}>
       <TextWrapper>
         <Title>4월 제주여행</Title>
         <DateWrapper>
@@ -20,7 +26,11 @@ const BudgetList = () => {
           <Date>2024.04.26</Date>
         </DateWrapper>
       </TextWrapper>
-      <IconButton>
+      <IconButton
+        className="starButton"
+        onClick={handleFavorit}
+        isFavorit={isFavorit}
+      >
         <IconStar />
       </IconButton>
     </BudgetItem>

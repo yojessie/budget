@@ -14,7 +14,8 @@ const lightTheme = {
     yellow: "#FEC044",
     green: "#76BC27",
     red: "#ED5564",
-    background: "linear-gradient(167deg, #F8F9ED 0%, #E7F2FF 100%)",
+    gradient: "linear-gradient(167deg, #F8F9ED 0%, #E7F2FF 100%)",
+    bgRoot: "#E6E9EE",
   },
   ...commonStyles,
 };
