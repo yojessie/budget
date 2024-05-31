@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { IconButton } from "../Button/IconButton.styled";
+import { IconButton } from "../Modules/IconButton.styled";
 import {
-  BudgetItem,
+  StyledList,
   Title,
   Date,
   DateWrapper,
@@ -9,7 +9,7 @@ import {
 } from "./BudgetItem.styled";
 import { IconStar } from "../../assets/icons/icons";
 
-const BudgetList = () => {
+const BudgetItem = () => {
   const [isFavorit, setFavorit] = useState(false);
 
   const handleFavorit = () => {
@@ -17,7 +17,7 @@ const BudgetList = () => {
   };
 
   return (
-    <BudgetItem isFavorit={isFavorit}>
+    <StyledList isFavorit={isFavorit}>
       <TextWrapper>
         <Title>4월 제주여행</Title>
         <DateWrapper>
@@ -33,8 +33,8 @@ const BudgetList = () => {
       >
         <IconStar />
       </IconButton>
-    </BudgetItem>
+    </StyledList>
   );
 };
 
-export default BudgetList;
+export default BudgetItem;

@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../../firebase";
-import { StyledButton } from "./Button.styled";
+import Button from "./Button";
 
-const Login = () => {
+const LoginButton = () => {
   const [user, setUser] = useState(null);
 
   const handleGoogleLogin = async () => {
@@ -17,12 +17,10 @@ const Login = () => {
   };
 
   return !user ? (
-    <StyledButton onClick={handleGoogleLogin}>
-      구글 계정으로 시작하기
-    </StyledButton>
+    <Button onClick={handleGoogleLogin}>구글 계정으로 시작하기</Button>
   ) : (
     <div>Welcome, {user.displayName}</div>
   );
 };
 
-export default Login;
+export default LoginButton;

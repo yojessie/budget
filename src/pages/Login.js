@@ -2,25 +2,26 @@ import React from "react";
 import {
   LogoImg,
   LogoText,
-  Title,
+  SubText,
   LogoDiv,
-  IntroContainer,
-} from "./Intro.styled";
-import LoginButton from "../components/Button/LoginButton";
+  LoginContainer,
+} from "./Login.styled";
+import LoginButton from "../components/Modules/LoginButton";
+
 import logoImg from "../assets/logo-img.svg";
 import logoText from "../assets/logo-txt.svg";
 
-const Intro = () => {
+const Login = () => {
   return (
-    <IntroContainer>
+    <LoginContainer>
       <LogoDiv>
         <LogoImg src={logoImg} alt="LogoImage" />
-        <Title>가볍게 시작하는 예산 관리</Title>
+        <SubText>가볍게 시작하는 예산 관리</SubText>
         <LogoText src={logoText} alt="LogoText" />
       </LogoDiv>
       <LoginButton />
-    </IntroContainer>
+    </LoginContainer>
   );
 };
 
-export default Intro;
+export default Login;

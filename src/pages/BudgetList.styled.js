@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const BudgetList = styled.ol`
+export const BudgetOl = styled.ol`
   width: 100%;
   height: auto;
-  flex-grow: 1;
+  /* grid-grow: 1; */
 `;

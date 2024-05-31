@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../components/container.styled";
+import Container from "../components/Modules/Container";
 
 export const LogoImg = styled.img`
   width: 60px;
@@ -12,16 +12,16 @@ export const LogoText = styled.img`
   height: auto;
 `;
 
-export const Title = styled.h1`
+export const SubText = styled.h1`
   ${({ theme }) => theme.typo.regular};
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 `;
 
 export const LogoDiv = styled.div`
-  ${({ theme }) => theme.flex.center};
-  flex-grow: 1;
+  ${({ theme }) => theme.grid.center};
+  /* grid-grow: 1; */
 `;
 
-export const IntroContainer = styled(Container)`
+export const LoginContainer = styled(Container)`
   background: ${({ theme }) => theme.color.gradient};
 `;

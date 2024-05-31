@@ -3,7 +3,7 @@ const commonStyles = {
     large: `
       font-size: 18px;
       font-weight: 500;
-      line-height: 120%;
+      line-height: 140%;
     `,
     regular: `
       font-size: 14px;
@@ -21,24 +21,22 @@ const commonStyles = {
       line-height: 140%;
     `,
   },
-  flex: {
+  grid: {
     center: `
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      display: grid;
+      place-items: center;
+      grid-auto-flow: column;
   `,
     centerRow: `
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      place-items: center;
+      grid-auto-flow: row;
   `,
     between: `
-      display: flex;
+      display: grid;
       align-items: center;
       justify-content: space-between;
-      flex-shrink: 0;
-      align-self: stretch;
+      grid-auto-flow: column;
   `,
   },
   radius: {

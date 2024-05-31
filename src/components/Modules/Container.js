@@ -1,6 +1,7 @@
+import React from "react";
 import styled from "styled-components";
 
-export const Container = styled.div`
+const StyledContainer = styled.div`
   position: static;
   width: 100%;
   max-width: 375px;
@@ -11,3 +12,9 @@ export const Container = styled.div`
   border-radius: ${({ theme }) => theme.radius.regular};
   ${({ theme }) => theme.flex.center};
 `;
+
+const Container = ({ children }) => {
+  return <StyledContainer>{children}</StyledContainer>;
+};
+
+export default Container;

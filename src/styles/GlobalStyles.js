@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     font-family: 'NanumSquare', sans-serif;
     background-color: #111;
-    ${({ theme }) => theme.flex.center};
+    ${({ theme }) => theme.grid.center};
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare', sans-serif;
@@ -40,7 +40,19 @@ const GlobalStyle = createGlobalStyle`
   }
   }
   input, textarea {
-    font-family: 'NanumSquare', sans-serif;
+    all: unset;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+
+    &:focus {
+     border-color: inherit;
+    }
   }
   a {
     text-decoration: none;
@@ -52,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.color.bgRoot};
-    ${({ theme }) => theme.flex.center};
+    ${({ theme }) => theme.grid.center};
   }
 `;
 

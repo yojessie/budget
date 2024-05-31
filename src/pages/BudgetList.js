@@ -1,19 +1,19 @@
 import React from "react";
-import BudgetGnb from "../components/Gnb/BudgetGnb";
 import BudgetItem from "../components/Content/BudgetItem";
-import { Container } from "../components/container.styled";
-import { BudgetList } from "../pages/Budget.styled";
+import BudgetGnb from "../components/Modules/BudgetGnb";
+import Container from "../components/Modules/Container";
+import { BudgetOl } from "./BudgetList.styled";
 
-const Budget = ({ toggleTheme, isDarkMode }) => {
+const BudgetList = ({ toggleTheme, isDarkMode }) => {
   return (
     <Container>
       <BudgetGnb toggleTheme={toggleTheme} isDarkMode={isDarkMode}></BudgetGnb>
-      <BudgetList>
+      <BudgetOl>
         <BudgetItem></BudgetItem>
         <BudgetItem></BudgetItem>
-      </BudgetList>
+      </BudgetOl>
     </Container>
   );
 };
 
-export default Budget;
+export default BudgetList;
