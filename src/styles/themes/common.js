@@ -21,21 +21,24 @@ const commonStyles = {
       line-height: 140%;
     `,
   },
-  grid: {
+  flex: {
     center: `
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
   `,
     centerRow: `
-      display: grid;
-      place-items: center;
-      grid-auto-flow: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   `,
     between: `
-      display: grid;
+      display: flex;
       align-items: center;
       justify-content: space-between;
-      grid-auto-flow: column;
+      flex-shrink: 0;
+      align-self: stretch;
   `,
   },
   radius: {
