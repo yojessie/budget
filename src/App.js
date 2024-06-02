@@ -10,6 +10,7 @@ import lightTheme from "./styles/themes/lightTheme";
 import Login from "./pages/Login";
 import BudgetList from "./pages/BudgetList";
 import BudgetSet from "./pages/BudgetSet";
+import BudgetListId from "./pages/BudgetListId";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -32,6 +33,7 @@ const App = () => {
             }
           />
           <Route path="/budget-set" element={<BudgetSet />} />
+          <Route path="/budget-list-id" element={<BudgetListId />} />
         </Routes>
       </Router>
     </ThemeProvider>

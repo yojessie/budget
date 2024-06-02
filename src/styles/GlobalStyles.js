@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
   button {
     font-family: 'NanumSquare', sans-serif;
-    color: ${({ theme }) => theme.color.txtWhite};
+    color: ${({ theme }) => theme.color.white};
     border: none;
     outline: none;
     background-color: inherit;

@@ -1,13 +1,18 @@
 import React from "react";
 import BudgetItem from "../components/Content/BudgetItem";
-import BudgetGnb from "../components/Modules/BudgetGnb";
+import Gnb from "../components/Modules/Gnb";
 import Container from "../components/Modules/Container.styled";
 import { BudgetOl } from "./BudgetList.styled";
 
 const BudgetList = ({ toggleTheme, isDarkMode }) => {
   return (
     <Container>
-      <BudgetGnb toggleTheme={toggleTheme} isDarkMode={isDarkMode}></BudgetGnb>
+      <Gnb
+        isDetail={false}
+        toggleTheme={toggleTheme}
+        isDarkMode={isDarkMode}
+        title={"나의 예산목록"}
+      ></Gnb>
       <BudgetOl>
         <BudgetItem></BudgetItem>
         <BudgetItem></BudgetItem>

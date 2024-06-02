@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IconButton } from "../Modules/IconButton.styled";
+import IconButton from "../Modules/IconButton";
 import {
   StyledList,
   Title,
@@ -7,7 +7,6 @@ import {
   DateWrapper,
   TextWrapper,
 } from "./BudgetItem.styled";
-import { IconStar } from "../../assets/icons/icons";
 
 const BudgetItem = () => {
   const [isFavorit, setFavorit] = useState(false);
@@ -30,9 +29,8 @@ const BudgetItem = () => {
         className="starButton"
         onClick={handleFavorit}
         isFavorit={isFavorit}
-      >
-        <IconStar />
-      </IconButton>
+        iconType="star"
+      />
     </StyledList>
   );
 };

@@ -8,7 +8,6 @@ export const StyledList = styled.li`
   border: 1px solid ${({ theme }) => theme.color.stroke};
   background: ${({ theme }) => theme.color.bgPale};
   ${({ theme }) => theme.flex.between};
-  /* grid-template-columns: 1fr auto; */
   margin-bottom: 8px;
 
   &:last-child {
@@ -33,7 +32,6 @@ export const Date = styled.p`
 
 export const DateWrapper = styled.div`
   ${({ theme }) => theme.flex.centerRow};
-  /* gap: 4px; */
 `;
 
 export const TextWrapper = styled.div`
