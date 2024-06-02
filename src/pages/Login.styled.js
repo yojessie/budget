@@ -19,9 +19,9 @@ export const SubText = styled.h1`
 
 export const LogoDiv = styled.div`
   ${({ theme }) => theme.grid.center};
-  /* grid-grow: 1; */
 `;
 
 export const LoginContainer = styled(Container)`
   background: ${({ theme }) => theme.color.gradient};
+  grid-template-rows: 1fr auto;
 `;

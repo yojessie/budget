@@ -25,12 +25,11 @@ const commonStyles = {
     center: `
       display: grid;
       place-items: center;
-      grid-auto-flow: column;
   `,
     centerRow: `
       display: grid;
       place-items: center;
-      grid-auto-flow: row;
+      grid-auto-flow: column;
   `,
     between: `
       display: grid;

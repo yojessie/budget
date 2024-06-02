@@ -7,12 +7,11 @@ const Container = styled.div`
   height: auto;
   background-color: ${({ theme }) => theme.color.bgDark};
   border-radius: 20px;
+  ${({ theme }) => theme.grid.centerRow};
   gap: 4px;
-  /* grid-direction: ${({ isDarkMode }) =>
-    isDarkMode ? "row" : "row-reverse"}; */
+  direction: ${({ isDarkMode }) => (isDarkMode ? "ltr" : "rtl")};
   padding: ${({ isDarkMode }) =>
     isDarkMode ? "4px 6px 4px 8px" : "4px 8px 4px 6px"};
-  ${({ theme }) => theme.grid.centerRow};
   cursor: pointer;
 `;
 

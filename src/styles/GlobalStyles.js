@@ -13,8 +13,6 @@ const GlobalStyle = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     font-family: 'NanumSquare', sans-serif;
-    background-color: #111;
-    ${({ theme }) => theme.grid.center};
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare', sans-serif;

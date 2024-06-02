@@ -6,6 +6,7 @@ const StyledInput = styled.input`
   height: 44px;
   background-color: ${({ theme }) => theme.color.bgDark};
   border-radius: ${({ theme }) => theme.radius.regular};
+  border: 1px solid ${({ theme }) => theme.color.stroke};
   color: ${({ theme }) => theme.color.txtBody};
   padding: 8px 8px 8px 16px;
 
