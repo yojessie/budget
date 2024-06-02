@@ -1,7 +1,7 @@
 import React from "react";
 import BudgetItem from "../components/Content/BudgetItem";
 import BudgetGnb from "../components/Modules/BudgetGnb";
-import Container from "../components/Modules/Container";
+import Container from "../components/Modules/Container.styled";
 import { BudgetOl } from "./BudgetList.styled";
 
 const BudgetList = ({ toggleTheme, isDarkMode }) => {

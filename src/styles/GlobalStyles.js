@@ -16,9 +16,12 @@ const GlobalStyle = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'NanumSquare', sans-serif;
+    ${({ theme }) => theme.typo.large};
     color: ${({ theme }) => theme.color.txtBody};
+    text-align: center;
   }
   p {
+    ${({ theme }) => theme.typo.regular};
     color: ${({ theme }) => theme.color.txtBody};
   }
   ol, ul {
@@ -62,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.color.bgRoot};
-    ${({ theme }) => theme.grid.center};
+    ${({ theme }) => theme.flex.center};
   }
 `;
 

@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   border-radius: ${({ theme }) => theme.radius.regular};
   box-shadow: ${({ theme }) => theme.shadow};
   ${({ theme }) => theme.typo.large};
+  flex-shrink: 0;
 `;
 
 const Button = ({ children }) => {

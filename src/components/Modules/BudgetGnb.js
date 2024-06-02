@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import ThemeToggle from "./ThemeToggle";
-import Title from "./Title";
 
 const Container = styled.div`
   width: 100%;
   height: auto;
   padding: 16px 0;
-  ${({ theme }) => theme.grid.between};
+  ${({ theme }) => theme.flex.between};
 `;
 
 const BudgetGnb = ({ toggleTheme, isDarkMode }) => {
   return (
     <Container>
-      <Title>나의 예산목록</Title>
+      <h1>나의 예산목록</h1>
       <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
     </Container>
   );

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Container from "../components/Modules/Container";
+import Container from "../components/Modules/Container.styled";
 
 export const LogoImg = styled.img`
   width: 60px;
@@ -18,10 +18,10 @@ export const SubText = styled.h1`
 `;
 
 export const LogoDiv = styled.div`
-  ${({ theme }) => theme.grid.center};
+  ${({ theme }) => theme.flex.center};
+  flex-grow: 1;
 `;
 
 export const LoginContainer = styled(Container)`
   background: ${({ theme }) => theme.color.gradient};
-  grid-template-rows: 1fr auto;
 `;
