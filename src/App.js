@@ -33,7 +33,11 @@ const App = () => {
             }
           />
           <Route path="/budget-set" element={<BudgetSet />} />
-          <Route path="/budget-list-id" element={<BudgetListId />} />
+          <Route
+            path="/budget-list-id"
+            element={<BudgetListId />}
+            isEmpty={false}
+          />
         </Routes>
       </Router>
     </ThemeProvider>

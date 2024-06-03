@@ -26,7 +26,6 @@ const BudgetItem = () => {
         </DateWrapper>
       </TextWrapper>
       <IconButton
-        className="starButton"
         onClick={handleFavorit}
         isFavorit={isFavorit}
         iconType="star"

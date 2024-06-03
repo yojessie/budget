@@ -14,7 +14,7 @@ export const StyledList = styled.li`
     margin-bottom: 0;
   }
 
-  .starButton {
+  button {
     color: ${({ isFavorit, theme }) =>
       isFavorit ? theme.color.yellow : theme.color.bgDisabled};
   }

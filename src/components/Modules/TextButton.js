@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.color.white20};
   ${({ theme }) => theme.flex.center};
-  padding: 2px 8px 2px 8px;
+  padding: 4px 8px;
   border-radius: 4px;
   ${({ theme }) => theme.typo.small};
   color: ${({ theme }) => theme.color.white};
