@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "../components/Modules/Container.styled";
 import InnerContainer from "../components/Modules/InnerContainer.styled";
+import { InputGroup } from "../components/Modules/Input";
 import Input from "../components/Modules/Input";
 import Button from "../components/Modules/Button";
-import { InputGroup } from "./BudgetSet.styled";
 
 const BudgetSet = () => {
   return (

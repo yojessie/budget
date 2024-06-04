@@ -5,7 +5,7 @@ const lightTheme = {
     bg: "#F8F8FC",
     bgPale: "#FFFFFF",
     bgDark: "#E6E9EE",
-    bgDisabled: "#CDD4E1",
+    disabled: "#CDD4E1",
     txtBody: "#3D434B",
     txtSub: "#ADB4BD",
     white: "#FFFFFF",

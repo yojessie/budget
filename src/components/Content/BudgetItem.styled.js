@@ -16,7 +16,7 @@ export const StyledList = styled.li`
 
   button {
     color: ${({ isFavorit, theme }) =>
-      isFavorit ? theme.color.yellow : theme.color.bgDisabled};
+      isFavorit ? theme.color.yellow : theme.color.disabled};
   }
 `;
 

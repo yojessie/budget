@@ -17,6 +17,7 @@ const StyledIconButton = styled.button`
   width: 40px;
   height: 40px;
   ${({ theme }) => theme.flex.center};
+  flex-shrink: 0;
   cursor: pointer;
 `;
 

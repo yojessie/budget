@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Container from "./Container.styled";
 
 const InnerContainer = styled(Container)`
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 40px 24px 24px 24px;
@@ -11,6 +12,12 @@ const InnerContainer = styled(Container)`
   border-radius: ${({ theme }) => theme.radius.regular};
   ${({ theme }) => theme.flex.center}
   gap: 24px;
+
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
 `;
 
 export default InnerContainer;

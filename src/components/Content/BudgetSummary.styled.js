@@ -7,6 +7,7 @@ export const StyledSummary = styled.div`
   color: ${({ theme }) => theme.color.white};
   border-radius: ${({ theme }) => theme.radius.large};
   padding: 24px;
+  margin-bottom: 16px;
 
   h1 {
     margin-bottom: 16px;

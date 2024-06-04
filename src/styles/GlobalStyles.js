@@ -24,9 +24,28 @@ const GlobalStyle = createGlobalStyle`
     ${({ theme }) => theme.typo.regular};
     color: ${({ theme }) => theme.color.txtBody};
   }
-  ol, ul {
+  ol, ul, li {
     list-style: none;
   }
+  select {
+  appearance: none;
+  -webkit-appearance: none; /* Safari/Chrome */
+  -moz-appearance: none; /* Firefox */
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+
+  &:focus {
+    border: inherit;
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+}
   button {
     font-family: 'NanumSquare', sans-serif;
     color: ${({ theme }) => theme.color.white};
@@ -52,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
 
     &:focus {
-     border-color: inherit;
+     border: inherit;
     }
   }
   a {

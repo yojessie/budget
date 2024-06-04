@@ -5,7 +5,7 @@ const darkTheme = {
     bg: "#22242A",
     bgPale: "#323741",
     bgDark: "#1A1B1F",
-    bgDisabled: "#4E5466",
+    disabled: "#4E5466",
     txtBody: "#FFFFFF",
     txtSub: "#7B849C",
     white: "#FFFFFF",

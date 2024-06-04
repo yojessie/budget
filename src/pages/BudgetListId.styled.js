@@ -6,6 +6,17 @@ export const EmptyContainer = styled.div`
   ${({ theme }) => theme.flex.center};
 
   p {
-    color: ${({ theme }) => theme.color.bgDisabled};
+    color: ${({ theme }) => theme.color.disabled};
+  }
+`;
+
+export const StyledSpendList = styled.ol`
+  width: 100%;
+  overflow: auto;
+  scrollbar-width: none;
+  padding-bottom: 60px;
+
+  :last-child {
+    border-bottom: 0;
   }
 `;

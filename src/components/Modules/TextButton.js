@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.color.white20};
   ${({ theme }) => theme.flex.center};
   padding: 4px 8px;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radius.small};
   ${({ theme }) => theme.typo.small};
   color: ${({ theme }) => theme.color.white};
 `;

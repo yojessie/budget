@@ -1,6 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
+export const InputGroup = styled.div`
+  width: 100%;
+  height: 100%;
+  ${({ theme }) => theme.flex.center}
+  justify-content: flex-start;
+
+  input {
+    margin-bottom: 8px;
+  }
+`;
+
 const StyledInput = styled.input`
   width: 100%;
   height: 44px;
@@ -15,7 +26,7 @@ const StyledInput = styled.input`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.color.bgDisabled};
+    color: ${({ theme }) => theme.color.disabled};
   }
 `;
 

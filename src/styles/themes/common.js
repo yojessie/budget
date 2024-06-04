@@ -33,6 +33,15 @@ const commonStyles = {
       align-items: center;
       justify-content: center;
   `,
+    startCol: `
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+  `,
+    startRow: `
+      display: flex;
+      align-items: flex-start;
+  `,
     between: `
       display: flex;
       align-items: center;
@@ -44,6 +53,7 @@ const commonStyles = {
   radius: {
     large: "16px",
     regular: "12px",
+    small: "4px",
   },
   shadow: `0px 8px 16px 0px rgba(67, 146, 245, 0.20)`,
 };
