@@ -20,7 +20,7 @@ const AddSpend = () => {
           <Input placeholder={"소비금액"} />
           <SelectDiv>
             <CatagorySelect name="catagory">
-              <option selected disabled>
+              <option selected disabled value="">
                 카테고리
               </option>
               <option value="식비">식비</option>

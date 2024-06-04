@@ -26,6 +26,7 @@ const StyledInput = styled.input`
   }
 
   &::placeholder {
+    ${({ theme }) => theme.typo.regular}
     color: ${({ theme }) => theme.color.disabled};
   }
 `;

@@ -13,7 +13,7 @@ const InnerContainer = styled(Container)`
   ${({ theme }) => theme.flex.center}
   gap: 24px;
 
-  .close-button {
+  button.close-button {
     position: absolute;
     top: 8px;
     right: 8px;

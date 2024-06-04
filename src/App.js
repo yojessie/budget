@@ -13,6 +13,8 @@ import BudgetSet from "./pages/BudgetSet";
 import BudgetListId from "./pages/BudgetListId";
 import AddSpend from "./pages/AddSpend";
 
+import Calendar from "./components/Modules/Calendar";
+
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -40,6 +42,7 @@ const App = () => {
             isEmpty={false}
           />
           <Route path="/add-spend" element={<AddSpend />} />
+          <Route path="calendar" element={<Calendar />} />
         </Routes>
       </Router>
     </ThemeProvider>

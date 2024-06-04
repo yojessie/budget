@@ -7,6 +7,7 @@ const STYLE = ({ theme }) => `
   background-color: ${theme.color.bg};
   border-radius: ${theme.radius.regular};
   border: 1px solid ${theme.color.stroke};
+  ${theme.typo.regular};
   color: ${theme.color.txtBody};
   padding: 8px 4px 8px 16px;
   margin-bottom: 8px;
@@ -34,7 +35,7 @@ export const CatagorySelect = styled.select`
     border: 1px solid ${({ theme }) => theme.color.blue};
   }
 
-  option:first-child {
+  option:disabled {
     color: ${({ theme }) => theme.color.disabled};
   }
 `;
